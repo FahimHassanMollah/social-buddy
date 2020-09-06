@@ -24,7 +24,7 @@ const PostShow = (props) => {
                 <Box component="div" p={4} >
                     <Grid container spacing={2}>
                         {
-                            props.postArray.map((post) => <Grid item xs={6} lg={3} sm={4}><CardComponent post={post}></CardComponent></Grid>)
+                            props.postArray.map((post) => <Grid item xs={6} lg={3} sm={4}><CardComponent key={post.id} readMoreBtn={true} post={post}></CardComponent></Grid>)
                         }
                     </Grid>
                 </Box>

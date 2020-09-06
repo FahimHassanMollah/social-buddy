@@ -15,13 +15,13 @@ const NoMatch = () => {
                     alignItems="center"
                 >
 
-<Box mx="auto" pt={20} bgcolor="">
-<Alert severity="error">
-                        <AlertTitle>Error</AlertTitle>
-                      <strong>  HTTP 404 / 404 Not Found / 404 Error or Server Not Found</strong>
-                    </Alert>
-      </Box>
-                   
+                    <Box mx="auto" pt={20} bgcolor="">
+                        <Alert severity="error">
+                            <AlertTitle>Error</AlertTitle>
+                            <strong>  HTTP 404 / 404 Not Found / 404 Error or Server Not Found</strong>
+                        </Alert>
+                    </Box>
+
 
                 </Grid>
 

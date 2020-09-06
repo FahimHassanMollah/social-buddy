@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import NoMatch from './components/NoMatch/NoMatch';
 import PostShow from './components/PostShow/PostShow';
+import PostDetails from './components/PostDetails/PostDetails';
 
 
 function App() {
@@ -33,6 +34,9 @@ function App() {
           </Route>
           <Route path="/allPost">
             <PostShow postArray={post}></PostShow>
+          </Route>
+          <Route path="/post/details/:id">
+            <PostDetails></PostDetails>
           </Route>
           <Route path="*">
             <NoMatch></NoMatch>

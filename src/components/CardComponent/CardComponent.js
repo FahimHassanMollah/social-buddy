@@ -5,6 +5,8 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { Link } from 'react-router-dom';
+import { Box } from '@material-ui/core';
 
 const useStyles = makeStyles({
     root: {
@@ -32,12 +34,12 @@ const CardComponent = (props) => {
     const bull = <span className={classes.bullet}>•</span>;
     return (
         <div>
-            <Card className={classes.root} >
+            <Card className={classes.root} style={{ textAlign: 'center' }} >
                 <CardContent>
-                    <Typography className={classes.title} color="textSecondary" gutterBottom>
+                    {/* <Typography className={classes.title} color="textSecondary" gutterBottom>
                         {id}
-                    </Typography>
-                    <Typography variant="h5" component="h2" color="textSecondary">
+                    </Typography> */}
+                    <Typography variant="h5" component="h2" color="textSecondary" >
                         {title}
                     </Typography>
                     <br />
@@ -50,11 +52,17 @@ const CardComponent = (props) => {
                         {'"a benevolent smile"'}
                     </Typography>
                 </CardContent>
-                <CardActions>
-                <Button variant="contained" color="primary" href="/hi">
-                     Read more
-                </Button>
-                </CardActions>
+                {
+                   props.readMoreBtn? <CardActions>
+                   <Box mx='auto' clone>
+                       <Link to={`/post/details/${id}`}> <Button variant="contained" color="primary">
+                           Read more </Button>
+                       </Link>
+                   </Box>
+
+               </CardActions>:""
+                }
+               
             </Card>
         </div>
     );
